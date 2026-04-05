@@ -1,0 +1,31 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: blue;
+}
+
+section {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: darkblue;
+}
+
+footer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 10px;
+}
