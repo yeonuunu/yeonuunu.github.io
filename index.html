@@ -1,0 +1,75 @@
+<!--
+  Name: Leeyeonwoo
+  Date: 2026-04-18
+  Section: 정보통신공학과
+
+  This is the main HTML page for my music playlist website.
+  It contains the layout of the page including the header,
+  song list, and modal for adding new songs.
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Music Playlist</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1 class="header__title">
+          <span class="title-line title-line--top">
+            <span class="title-word">My</span>
+            <span class="header__icon">🎧</span>
+          </span>
+          <span class="title-line title-line--middle">Music</span>
+          <span class="title-line title-line--bottom">Playlist</span>
+        </h1>
+
+        <p class="subtext">Record your favorite songs!</p>
+        <p class="name">202401614 이연우</p>
+      </header>
+
+      <section class="cards-row" id="cards-row" aria-label="Featured songs"></section>
+
+      <section class="list-section" id="list-section" aria-label="More songs"></section>
+
+      <div class="add-btn-wrap">
+        <button class="add-btn" id="add-btn" title="곡 추가">＋</button>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-label="곡 추가">
+      <div class="modal">
+        <button class="modal__close" id="modal-close" aria-label="닫기">✕</button>
+        <p class="modal__title">✏️ Add a song</p>
+
+        <div class="modal__field">
+          <label class="modal__label" for="input-title">The title of the song</label>
+          <input class="modal__input" id="input-title" type="text" placeholder="ex. Shrink" />
+        </div>
+
+        <div class="modal__field">
+          <label class="modal__label" for="input-artist">Artist</label>
+          <input class="modal__input" id="input-artist" type="text" placeholder="ex. HONNE" />
+        </div>
+
+        <div class="modal__field">
+          <label class="modal__label" for="input-cover">photo</label>
+          <input id="input-cover" type="file" accept="image/*" />
+        </div>
+
+        <div class="modal__actions">
+          <button class="btn btn--ghost" id="modal-cancel">Cancle</button>
+          <button class="btn btn--primary" id="modal-confirm">Add♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+  </body>
+</html>
